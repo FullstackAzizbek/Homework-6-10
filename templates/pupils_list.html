@@ -1,0 +1,34 @@
+{% extends "layout.html" %} {% block title %} Pupils {% endblock %}
+//////////////////////////////////////////////////////////////////////////////////////////////////
+{% block content %}
+<div class="pupil_box container">
+  <img class="card-img-2" src="{{ student.pupil_img.url }}" alt="img" />
+  <div class="pupil_card">
+    <div class="pupil_card_top">
+      <h5>{{ student.name }}</h5>
+      <h6>{{ student.spec }}</h6>
+      <p>
+        Bu o'quvchimizning barcha oylardagi to'plagan baholari bilan quyidagi
+        jadvalda tanishishingiz mumkin. Bu yerda barcha oydagi imtihon
+        natijalari ko'rsatilgan.
+      </p>
+    </div>
+    <div class="pupil_card_bottom">
+      <table>
+        <th class="th">1-oy</th>
+        <th class="th">2-oy</th>
+        <th class="th">3-oy</th>
+        <th class="th">4-oy</th>
+        <th class="th">5-oy</th>
+        <tr>
+          <td class="td">{{student.res_1}}</td>
+          <td class="td">{{student.res_2}}</td>
+          <td class="td">{{student.res_3}}</td>
+          <td class="td">{{student.res_4}}</td>
+          <td class="td">{{student.res_5}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}

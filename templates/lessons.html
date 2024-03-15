@@ -1,0 +1,16 @@
+{% extends "layout.html" %} {% block title %} Lessons {% endblock %}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+{% block content %}
+<div class="lessons_box">
+  <h3>Hozirgacha o'tilgan mavzular</h3>
+  <div class="lessons_cards">
+    {% for lesson in lessons %}
+    <div class="lesson_card">
+      <img class="card_img" src="{{lesson.img.url }}" alt="img" />
+      <h5>{{lesson.title}}</h5>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

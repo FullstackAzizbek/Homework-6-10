@@ -1,0 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+.home_box {
+  text-align: center;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 150px;
+}
+.home_box .bt {
+  padding: 8px 20px;
+  background-color: blue;
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.home_box p {
+  letter-spacing: 1px;
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.lessons_box {
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.lessons_cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 35px;
+}
+.lesson_card {
+  padding: 20px;
+  background-color: whitesmoke;
+  box-shadow: 0 0 12px 8px #e1e1e1;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lesson_card:hover {
+  cursor: pointer;
+}
+.card_img {
+  width: 100%;
+}
+.card-img-2 {
+  width: 25%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.pupil_box {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  padding: 25px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 8px #e1e1e1;
+}
+.pupil_card {
+  width: 75%;
+}
+.pupil_card_top {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+.th,
+.td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
+th {
+  background-color: #f2f2f2;
+}
