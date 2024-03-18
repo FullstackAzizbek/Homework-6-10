@@ -123,7 +123,8 @@ if DEBUG is False:
     STATIC_ROOT = 'static'
 else:
     STATICFILES_DIRS = [
-        'static'
+        'static',
+        'media'
     ]
 import os
 MEDIA_URL = 'media/'

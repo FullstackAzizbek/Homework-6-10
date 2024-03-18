@@ -1,12 +1,14 @@
 {% extends "layout.html" %} {% block title %} Pupils {% endblock %}
 //////////////////////////////////////////////////////////////////////////////////////////////////
+{% load static %}
+//////////////////////////////////////////////////////////////////////////////////////////////////
 {% block content %}
 <div class="lessons_box">
   <h3>Bizning o'quvchilar</h3>
   <div class="lessons_cards">
     {% for pupil in students %}
     <div class="lesson_card">
-      <img class="card_img" src="{{ pupil.pupil_img.url }}" alt="img" />
+      <img class="card_img" src="{% static pupil.pupil_img %}" alt="img" />
       <a href="{% url 'list_user' pupil.id %}">{{ pupil.name }}</a>
       <h6>{{pupil.spec}}</h6>
     </div>

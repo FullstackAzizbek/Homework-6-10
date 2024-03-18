@@ -1,0 +1,58 @@
+{% extends "layout.html" %} {% block title %} Add Lesson {% endblock %}
+///////////////////////////////////////////////////////////////////////////////////////
+{% block content %}
+<style>
+  .lesson-container {
+    width: 80%;
+    max-width: 1280px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .lesson-form {
+    margin-top: 20px;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  .form-label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  .form-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .form-submit {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .form-submit:hover {
+    background-color: #0056b3;
+  }
+</style>
+<div class="lesson-container">
+  <form class="lesson-form" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="title" class="form-label">Lesson title:</label>
+      <input type="text" id="name" name="title" class="form-input" required />
+    </div>
+    <div class="form-group">
+      <label for="img" class="form-label">Lesson img:</label>
+      <input type="file" name="image" required />
+    </div>
+    <button type="submit" class="form-submit">Yuborish</button>
+  </form>
+</div>
+
+{% endblock %}

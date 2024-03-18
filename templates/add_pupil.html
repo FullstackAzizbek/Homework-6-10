@@ -1,0 +1,82 @@
+{% extends "layout.html" %} {% block title %} Add Pupil {% endblock %}
+///////////////////////////////////////////////////////////////////////////////////////
+{% block content %}
+<style>
+  .lesson-container {
+    width: 80%;
+    max-width: 1280px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .lesson-form {
+    margin-top: 20px;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  .form-label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  .form-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .form-submit {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .form-submit:hover {
+    background-color: #0056b3;
+  }
+</style>
+<div class="lesson-container">
+  <form class="lesson-form" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="name" class="form-label">Pupil name:</label>
+      <input type="text" id="name" name="name" class="form-input" required />
+    </div>
+    <div class="form-group">
+      <label for="spec" class="form-label">Pupil Speciality:</label>
+      <input type="text" name="spec" required class="form-input" />
+    </div>
+    <div class="form-group">
+      <label for="img" class="form-label">Pupil img:</label>
+      <input type="file" name="img" required />
+    </div>
+    <div class="form-group">
+      <label for="res_1" class="form-label">1 month result:</label>
+      <input type="text" name="res_1" required class="form-input" />
+    </div>
+    <div class="form-group">
+      <label for="res_2" class="form-label">2 month result:</label>
+      <input type="text" name="res_2" required class="form-input" />
+    </div>
+    <div class="form-group">
+      <label for="res_3" class="form-label">3 month result:</label>
+      <input type="text" name="res_3" required class="form-input" />
+    </div>
+    <div class="form-group">
+      <label for="res_4" class="form-label">4 month result:</label>
+      <input type="text" name="res_4" required class="form-input" />
+    </div>
+    <div class="form-group">
+      <label for="res_5" class="form-label">5 month result:</label>
+      <input type="text" name="res_5" required class="form-input" />
+    </div>
+    <button type="submit" class="form-submit">Yuborish</button>
+  </form>
+</div>
+
+{% endblock %}

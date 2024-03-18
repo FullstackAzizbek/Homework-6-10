@@ -35,6 +35,7 @@
   flex-direction: column;
   gap: 30px;
 }
+
 .lessons_cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
